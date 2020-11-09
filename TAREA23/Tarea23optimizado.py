@@ -1,6 +1,7 @@
 """ CIFRADO CON SOLITARIO: Para la resolución de este ejercicio, utilizo la opción descrita en la web,
 en la que se utiliza una clave secreta en el último de los pasos. Defino en la parte inicial los datos necesarios
-que serán la clave, la relación letra-número para la conversión, y la relación carta-número para generar la ristra"""
+que serán la clave, la relación letra-número para la conversión, y la relación carta-número para generar la ristra.
+No se necesita ningún módulo para su ejecución"""
 
 # La clave para el paso 4 del cifrado/descifrado
 clave = "EZEZDUTUTZIKOINORINIREBARNEANAGINTZENZUINORZARATAALAEREMENPERATZENDIDAZULASTOUSTELAIZANGONAIZBAKARRIKDAKITALANAIZELA"
