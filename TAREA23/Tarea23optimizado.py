@@ -1,7 +1,9 @@
 """ CIFRADO CON SOLITARIO: Para la resolución de este ejercicio, utilizo la opción descrita en la web,
-en la que se utiliza una clave secreta en el último de los pasos. Defino en la parte inicial los datos necesarios
-que serán la clave, la relación letra-número para la conversión, y la relación carta-número para generar la ristra.
-No se necesita ningún módulo para su ejecución"""
+en la que se utiliza una clave secreta en el último de los pasos, con el fin de poder utilizar el algoritmo 
+en diferentes pares emisor-receptor utilizando diferente encriptado para cada uno, con el cambio de la clave.
+ Defino en la parte inicial los datos necesarios, que serán la clave, la relación letra-número para la conversión, 
+ y la relación carta-número para generar la ristra.
+No se necesita ningún módulo para su ejecución fuera de los módulos standard de Python."""
 
 # La clave para el paso 4 del cifrado/descifrado
 clave = "EZEZDUTUTZIKOINORINIREBARNEANAGINTZENZUINORZARATAALAEREMENPERATZENDIDAZULASTOUSTELAIZANGONAIZBAKARRIKDAKITALANAIZELA"
