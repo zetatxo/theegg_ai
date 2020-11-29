@@ -33,6 +33,18 @@ def crearMatriz (secuencia1, secuencia2):
             fila += 1
     return matrix
 
+def imprimirResultado(matrix):
+    #Busco el valor maximo obtenido en la matriz
+    maximo = int(np.amax(matriz))
+    print("La mayor secuencia de bases adyacentes es de "+ str(maximo) + " bases")
+    #Busco la posicion del valor maximo de la matriz
+    posicion_max = np.where(matriz == np.amax(matriz))
+    #Extraigo la fila en la que está dicho máximo
+    fila = posicion_max[0][0]
+    #Extraigo como resultado la subcadena de la secuencia con la posicion de la fila y longitud de la subsecuencia
+    resultado = sec2[((fila-maximo)+1):fila+1]
+    print("Y la secuencia es: " + "".join(resultado))
+
 secuencia_uno = 'ATGTCTTCCTCGA'
 secuencia_dos = 'TGCTTCCTATGAC'
 #Genero las listas a partir del string introducido
@@ -40,16 +52,8 @@ sec1 = list(secuencia_uno)
 sec2 = list(secuencia_dos)
 #Creo la matriz para mis secuencias a comparar
 matriz = crearMatriz(sec1, sec2)
-#Busco el valor maximo obtenido en la matriz
-maximo = int(np.amax(matriz))
-print("La mayor secuencia de bases adyacentes es de "+ str(maximo) + " bases")
-#Busco la posicion del valor maximo de la matriz
-posicion_max = np.where(matriz == np.amax(matriz))
-#Extraigo la fila en la que está dicho máximo
-fila = posicion_max[0][0]
-#Extraigo como resultado la subcadena de la secuencia con la posicion de la fila y longitud de la subsecuencia
-resultado = sec2[((fila-maximo)+1):fila+1]
-print("Y la secuencia es: " + "".join(resultado))
+imprimirResultado(matriz)
+
 
 
 
