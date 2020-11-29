@@ -36,13 +36,13 @@ def crearMatriz (secuencia1, secuencia2):
 def imprimirResultado(matrix):
     #Busco el valor maximo obtenido en la matriz
     maximo = int(np.amax(matriz))
-    print("La mayor secuencia de bases adyacentes es de "+ str(maximo) + " bases")
     #Busco la posicion del valor maximo de la matriz
     posicion_max = np.where(matriz == np.amax(matriz))
     #Extraigo la fila en la que está dicho máximo
     fila = posicion_max[0][0]
     #Extraigo como resultado la subcadena de la secuencia con la posicion de la fila y longitud de la subsecuencia
     resultado = sec2[((fila-maximo)+1):fila+1]
+    print("La mayor secuencia de bases adyacentes es de "+ str(maximo) + " bases")
     print("Y la secuencia es: " + "".join(resultado))
 
 secuencia_uno = 'ATGTCTTCCTCGA'
