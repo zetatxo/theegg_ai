@@ -1,0 +1,20 @@
+ALGORITMO DEL LECHERO
+
+Se utiliza la programación dinámica para la resolución del problema. Con esta metodología se logra una optimización en el tiempo de ejecución (O(nlogn)) comparado con una comprobación
+de todas las opciones entre los pesos de vacas y su producción (O (2^n)), ya que se van obteniendo resultados de subgrupos y almacenando en una matriz. Esto permite echar mano del cálculo
+anterior, para ver si es optimizado con el valor presente obtenido.
+La metodología se basa en crear una matriz en la que en las columnas pondremos un rango de peso donde su mayor dimensión será el peso del camion y en las filas, los pesos de 
+las vacas que están en venta.
+Dicha matriz se irá completando con la producción máxima entre la vaca anterior en el mismo rango de peso , y la produccion calculada en la posición inmediatamente anterior más 
+la producción de la vaca que pudiera entrar en la diferencia de peso entre el rango actual y el anterior.
+Además, en caso de no ser necesario un cálculo preciso, o que el tiempo destinado al cálculo del valor preciso no sea asumible por tener demasiados datos, permite implementar 
+un diferencial de rango de peso mayor, reduciendo el tiempo sustancialmente.
+
+Finalmente, el valor obtenido para la última posición de la matriz, será el valor buscado.
+
+
+
+
+
+
+
