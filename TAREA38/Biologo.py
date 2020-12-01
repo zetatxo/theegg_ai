@@ -38,13 +38,13 @@ def extraerResultado(matrix):
     maximo = int(np.amax(matriz))
     #Busco la posicion del valor maximo de la matriz
     posicion_max = np.where(matriz == np.amax(matriz))
-    print(posicion_max)
     #Extraigo la fila en la que está dicho máximo/maximos
-    secuencia = list()
+    indicesFila = list()
+    #Extraigo a una lista los indices en las filas, de los valores maximos
     for i in range(0,len(posicion_max), 1):
-        secuencia.append(posicion_max[0][i])
+        indicesFila.append(posicion_max[0][i])
     #Extraigo como resultado la subcadena de la secuencia con la posicion de la fila y longitud de la subsecuencia
-    return maximo, secuencia
+    return maximo, indicesFila
 
 
 
@@ -55,11 +55,10 @@ sec1 = list(secuencia_uno)
 sec2 = list(secuencia_dos)
 #Creo la matriz para mis secuencias a comparar
 matriz = crearMatriz(sec1, sec2)
-print(matriz)
-max, res = extraerResultado(matriz)
-print("La secuencia adjacente mayor es de " + str(max) + " bases.")
-for fila in res:
-    print("".join(sec2[((fila-max)+1):fila+1]))
+maximo, resultado = extraerResultado(matriz)
+print("La secuencia adjacente mayor es de " + str(maximo) + " bases.")
+for fila in resultado:
+    print("".join(sec2[((fila-maximo)+1):fila+1]))
 
 
 
