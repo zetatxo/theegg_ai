@@ -12,7 +12,9 @@ posicion y restando dicha longitud obtendré, de una de las secuencias, la secue
 import numpy as np
 # Creo la matriz utilizando la funcion crearMatriz tomando como argumentos 2 listas de secuencias
 def crearMatriz (secuencia1, secuencia2):
+    #Las columnas representan la secuencia 1
     col = np.array(secuencia1)
+    #Las filas la secuencia 2
     row = np.array(secuencia2)
     matrix = np.zeros((len(row), len(col)), order = "F")
     fila = 0
@@ -26,14 +28,16 @@ def crearMatriz (secuencia1, secuencia2):
                             matrix[fila][columna] = 1
                         else:
                             matrix[fila][columna] = matrix[fila-1][columna-1] + 1
+                            matrix[fila][0] = 1
                     else:
                         matrix[fila][columna] = -1
                     columna += 1
             columna = 0
             fila += 1
     return matrix
-
-def extraerResultado(matrix):
+#Creo la funcion extraerResultadoMax para obtener el número maximo de bases adyacentes, y las bases que
+#la/las componen
+def extraerResultadoMax(matrix):
     #Busco el valor maximo obtenido en la matriz
     maximo = int(np.amax(matriz))
     #Busco la posicion del valor maximo de la matriz
@@ -41,21 +45,22 @@ def extraerResultado(matrix):
     #Extraigo la fila en la que está dicho máximo/maximos
     indicesFila = list()
     #Extraigo a una lista los indices en las filas, de los valores maximos
-    for i in range(0,len(posicion_max), 1):
+    for i in range(0,len(posicion_max[0]), 1):
         indicesFila.append(posicion_max[0][i])
     #Extraigo como resultado la subcadena de la secuencia con la posicion de la fila y longitud de la subsecuencia
     return maximo, indicesFila
 
 
 
-secuencia_uno = 'ATGTCTTCCTCGACACAC'
-secuencia_dos = 'TGCTTCCTATGACACAT'
+secuencia_uno = 'TAGUCTTCCTCGACACAT'
+secuencia_dos = 'TGATGACTTCCTATGACACA'
 #Genero las listas a partir del string introducido
 sec1 = list(secuencia_uno)
 sec2 = list(secuencia_dos)
 #Creo la matriz para mis secuencias a comparar
+
 matriz = crearMatriz(sec1, sec2)
-maximo, resultado = extraerResultado(matriz)
+maximo, resultado = extraerResultadoMax(matriz)
 print("La secuencia adjacente mayor es de " + str(maximo) + " bases.")
 for fila in resultado:
     print("".join(sec2[((fila-maximo)+1):fila+1]))
