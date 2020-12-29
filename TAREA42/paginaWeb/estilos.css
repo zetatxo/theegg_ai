@@ -1,0 +1,35 @@
+header{
+    background: #581845;
+    font-style: italic;
+    color: beige;
+    align-items: center
+}
+footer{
+    background: #581845;
+    font-style: italic;
+    color: beige;
+    align-items: center
+}
+#impar{
+    background: #CEA6C9;
+}
+#par{
+    background: #EAE8EA;
+}
+aside{
+    background: #EAE8EA;
+}
+iframe{
+    position:relative;
+    height:60%;
+    width:100%;
+    top:0px;
+    left:0px;
+}
+video{
+    position:relative;
+    height:60%;
+    width:100%;
+    top:0px;
+    left:0px;
+}
