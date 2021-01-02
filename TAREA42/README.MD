@@ -18,3 +18,13 @@ También se incluyen algunos tips para su uso, que incluye información necesari
 - Para que los comandos de voz sean más eficientes, se recomienda quitar el volumen del vídeo, o ponerlo muy bajo.
 
 Se incluye la posibilidad de decir "HOLA" para comprobar que los comandos de voz funcionan. Lá página debe responder "Hola" en formato de notificación.
+
+Para simular un servidor y tener un localhost, he instalado MAMP. Dejo enlace para descargas y más info:
+
+https://www.mamp.info/en/windows/
+
+Una vez descargado, se debe añadir la carpeta del ejercicio en la ruta:
+
+C:\MAMP\htdocs
+
+Finalmente, se debe abrir el navegador y poner en la barra de búsqueda: localhost/paginaWeb/index.html
