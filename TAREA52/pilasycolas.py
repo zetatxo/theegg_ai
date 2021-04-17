@@ -23,3 +23,17 @@ class Pila:
 
 """Las colas seran, en cambio FIFO (First In First Out)"""
 
+class Cola:
+    def __init__(self):
+        self.items = []
+
+    def encolar(self,x):
+        self.items.append(x)
+
+    def desencolar(self):
+        try:
+            self.items.pop(0)
+        except IndexError:
+            raise ValueError("La lista está vacía")
+
+
