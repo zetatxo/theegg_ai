@@ -12,14 +12,11 @@ primaria = crearSet()
 print("____ALUMNOS DE SECUNDARIA____")
 secundaria = crearSet()
 
-print("Los nombres de pila de los alumnos de primaria son: ")
+print("Los nombres de pila de los alumnos de primaria y secundaria son: ")
 
-for elemento in primaria:
-    print(elemento)
+todosNombres = primaria | secundaria # Se genera la union de conjuntos para listar los nombres de pila de ambos cursos, sin repeticiones
 
-print("Los nombres de pila de los alumnos de secundaria son: ")
-
-for elemento in secundaria:
+for elemento in todosNombres:
     print(elemento)
 
 print("Los nombres que se repiten entre ambos cursos son: ")
