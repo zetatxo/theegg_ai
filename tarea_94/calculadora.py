@@ -1,6 +1,6 @@
 """Módulo que definirá suma, resta, producto y division"""
 
-def sumar(a,b):
+def sumar(a, b):
     try:
         n1 = float(a)
         n2 = float(b)
@@ -8,7 +8,7 @@ def sumar(a,b):
     except ValueError:
         print("Debe introducir números para ejecutar la función")
     
-def restar (a,b):
+def restar (a, b):
     try:
         n1 = float(a)
         n2 = float(b)
@@ -16,7 +16,7 @@ def restar (a,b):
     except ValueError:
         print("Debe introducir números para ejecutar la función")
 
-def multiplicar (a,b):
+def multiplicar (a, b):
     try:
         n1 = float(a)
         n2 = float(b)
@@ -24,7 +24,7 @@ def multiplicar (a,b):
     except ValueError:
         print("Debe introducir números para ejecutar la función")
 
-def dividir (a,b):
+def dividir (a, b):
     try:
         n1 = float(a)
         n2 = float(b)
